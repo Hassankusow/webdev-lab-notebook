@@ -2,16 +2,236 @@
   background-color: rgb(190, 190, 231);
 }
 
+.grid-item {
+  background-color: purple;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
 /* Grid Container 1 */
+.grid-container-1 {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-auto-rows: 100px;
+  gap: 10px;
+  background-color: rgb(190, 190, 231);
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  grid-auto-flow: row; /* Ensures normal row flow */
+}
+.grid-container-1 .grid-item.item1 {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100px;
+}
+
+.grid-container-1 .grid-item.item2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.grid-container-1 .grid-item.item3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* Row 2 */
+.grid-container-1 .grid-item.item4 {
+  grid-column: 1;
+  grid-row: 2;
+  width: 100px;
+}
+
+.grid-container-1 .grid-item.item5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.grid-container-1 .grid-item.item6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+/* Row 3 */
+.grid-container-1 .grid-item.item7 {
+  grid-column: 1;
+  grid-row: 3;
+  width: 100px;
+}
+
+/* Big item 8 */
+.grid-container-1 .grid-item.item8 {
+  grid-column: 2;
+  grid-row: 3;
+}
 
 /* Grid Container 2 */
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-auto-rows: 200px;
+  gap: 10px;
+  background-color: rgb(190, 190, 231);
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  grid-auto-flow: row;
+}
+
+/* First Row */
+.grid-container-2 .grid-item.item1 {
+  grid-column: 1;
+  grid-row: 1;
+  height: 100px;
+}
+.grid-container-2 .grid-item.item2 {
+  grid-column: 2;
+  grid-row: 1;
+  height: 100px;
+}
+.grid-container-2 .grid-item.item3 {
+  grid-column: 3;
+  grid-row: 1;
+  height: 100px;
+}
+.grid-container-2 .grid-item.item4 {
+  grid-column: 4;
+  grid-row: 1;
+  height: 100px;
+}
+
+/* Second Row (Taller) */
+.grid-container-2 .grid-item.item5 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.grid-container-2 .grid-item.item6 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.grid-container-2 .grid-item.item7 {
+  grid-column: 3;
+  grid-row: 2;
+}
+.grid-container-2 .grid-item.item8 {
+  grid-column: 4;
+  grid-row: 2;
+}
 
 /* use height: 400px; on the container */
 
 /* Grid Container 3 */
+.grid-container-3 {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 100px 100px 100px auto;
+  grid-auto-rows: 100px auto;
+  gap: 10px;
+  background-color: rgb(190, 190, 231);
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  grid-auto-flow: row;
+}
 
+/* Row 1 */
+.grid-container-3 .grid-item.item1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.grid-container-3 .grid-item.item2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.grid-container-3 .grid-item.item3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* Row 2 */
+.grid-container-3 .grid-item.item4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.grid-container-3 .grid-item.item5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.grid-container-3 .grid-item.item6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+/* Row 3 */
+.grid-container-3 .grid-item.item7 {
+  grid-column: 1;
+  grid-row: 3;
+}
+.grid-container-3 .grid-item.item8 {
+  grid-column: 2 / span 2; /* Spans across 2 columns */
+  grid-row: 3;
+}
 /* use height: 400px; on the container */
 
 /* Grid Container 4 */
+.grid-container-4 {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 70px 70px 70px 70px 70px auto;
+  grid-auto-rows: auto;
+  gap: 10px;
+  background-color: rgb(190, 190, 231);
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  grid-auto-flow: row;
+}
+.grid-container-4 .grid-item.item1 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.grid-container-4 .grid-item.item2 {
+  grid-column: 2;
+  grid-row: 1;
+}
 
+/* Row 2 */
+.grid-container-4 .grid-item.item3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Row 3 */
+.grid-container-4 .grid-item.item4 {
+  grid-column: 1;
+  grid-row: 3;
+}
+.grid-container-4 .grid-item.item5 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Row 4 */
+.grid-container-4 .grid-item.item6 {
+  grid-column: 1 / span 2; /* Stretches across both columns */
+  grid-row: 4;
+}
+
+/* Row 5 */
+.grid-container-4 .grid-item.item7 {
+  grid-column: 1;
+  grid-row: 5;
+}
+.grid-container-4 .grid-item.item8 {
+  grid-column: 2;
+  grid-row: 5;
+}
 /* use height: 600px; on the container */

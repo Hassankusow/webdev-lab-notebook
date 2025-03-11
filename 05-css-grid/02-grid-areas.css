@@ -5,20 +5,102 @@
 .article {
   grid-area: article;
 }
-
 .grid-container {
   display: grid;
   height: 97vh;
+  gap: 5px; /* Small but visible spacing */
+  padding: 5px;
+
+  /* Mobile-first Layout */
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 1fr);
-  gap: 10px;
+  grid-template-rows: auto 2fr 2fr 2fr auto;
   grid-template-areas:
-    'header'
-    'article'
-    'article'
-    'section'
-    'section'
-    'section'
-    'aside'
-    'footer';
+    "header"
+    "article"
+    "aside"
+    "section"
+    "footer";
+}
+
+/* Tablet Layout */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 3fr 2fr 1fr;
+    grid-template-areas:
+      "header header"
+      "article aside"
+      "section section"
+      "footer footer";
+  }
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 3fr 2fr 1fr;
+    grid-template-areas:
+      "header header"
+      "article aside"
+      "section section"
+      "footer footer";
+  }
+}
+
+/* Styling for Grid Items */
+.grid-item {
+  background-color: purple;
+  color: white;
+  padding: 20px;
+  text-align: left;
+  font-size: 1.5rem;
+  border-radius: 10px; /* Rounded corners for spacing */
+}
+
+/* Assigning grid areas */
+.header {
+  grid-area: header;
+  height: 8vh; /* Small header */
+}
+
+.article {
+  grid-area: article;
+  min-height: 22vh; /* Larger for readability */
+}
+
+.aside {
+  grid-area: aside;
+  min-height: 22vh; /* Same as article */
+}
+
+.section {
+  grid-area: section;
+  min-height: 15vh;
+}
+
+/* **Mobile Fix: Switch Section & Aside Rows** */
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "article"
+      "section"
+      "aside"
+      "footer";
+  }
+}
+
+.footer {
+  grid-area: footer;
+  height: 6vh; /* Small footer */
+}
+
+/* Align text to the left but center it vertically */
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
 }

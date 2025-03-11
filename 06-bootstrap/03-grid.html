@@ -2,17 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercise 03 - Bootstrap Grid</title>
+    <title>Bootstrap Grid</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../_styles/styles.css" />
-    <link rel="stylesheet" href="styles.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <style>
+      .grid-box {
+        background-color: purple;
+        color: white;
+        text-align: left;
+        padding: 20px;
+        font-size: 1.5rem;
+        border: 2px solid white;
+      }
+    </style>
   </head>
   <body>
-    <h1>03 - Bootstrap Grid</h1>
-    <!-- Add your code here -->
+    <div class="container mt-4">
+      <h1 class="text-center">Bootstrap Grid</h1>
+
+      <!-- First Row -->
+      <div class="row">
+        <div class="col-md-8 col-sm-12 grid-box">One</div>
+        <div class="col-md-4 col-sm-12 grid-box">Two</div>
+      </div>
+
+      <!-- Second Row (Three and Four in same row on mobile) -->
+      <div class="row">
+        <div class="col-md-6 col-sm-6 grid-box">Three</div>
+        <div class="col-md-6 col-sm-6 grid-box">Four</div>
+      </div>
+
+      <!-- Third Row -->
+      <div class="row">
+        <div class="col-md-4 col-sm-12 grid-box">Five</div>
+        <div class="col-md-4 col-sm-12 grid-box">Six</div>
+        <div class="col-md-4 col-sm-12 grid-box">Seven</div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

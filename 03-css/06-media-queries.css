@@ -1,6 +1,133 @@
+:root {
+  --darkmagenta: #8b008b;
+  --magenta: #ff00ff;
+  --royalblue: #4169e1;
+  --teal: #008080;
+  --violet: #9400d3;
+  --red: #ff0000;
+  --green: #008000;
+  --orange: #ffa500;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* Large Screens (1024px and up) */
 @media (min-width: 1024px) {
   body {
-    background: var(--green);
+    background: var(--green); 
+    color: var(--black);
+    margin: 0; 
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    background-color: var(--black);
     color: var(--white);
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-start; 
+    list-style: none; 
+    padding-left: 20px; 
+
+  }
+
+  nav ul li {
+    padding-left: 20px;
+
+  }
+
+  nav ul li a {
+    color: var(--white);
+    text-decoration: none; 
+    padding: 10px 15px; 
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background: var(--orange); 
+    color: var(--black);
+    margin: 0; 
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-start; 
+    list-style: none; 
+    padding-left: 20px; 
+  }
+
+  nav ul li {
+    padding-left: 20px; 
+    
+  }
+
+  nav ul li a {
+    color: var(--white);
+    text-decoration: none; 
+    padding: 10px 15px; /
+    display: inline-block;
+  }
+}
+
+
+@media (max-width: 767px) {
+  body {
+    background: var(--magenta); /* Background for the rest of the body */
+    color: var(--black);
+    margin: 0; /* Ensures no space around body */
+    padding: 0;
+    width: 100%;
+    height: auto; 
+  }
+
+  header {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: left;
+    padding: 15px; /* Adds padding for spacing */
+    width: 100vw; /* Makes sure the header spans the full width */
+    position: relative; /* Ensures it stays above the body background */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: left; /* Aligns menu items to the left */
+    gap: 10px; /* Adds space between each menu item */
+    padding: 0;
+    margin-top: 10px; /* Adds spacing between header and menu */
+    list-style: none; /* Hides bullet points */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Adds vertical spacing */
+    list-style: none; /* Ensures no bullets appear */
+  }
+
+  nav ul li a {
+    color: var(--white);
+    padding: 10px 15px; /* Adds more padding for better touch area */
+    display: inline-block;
+    text-decoration: none; /
   }
 }
